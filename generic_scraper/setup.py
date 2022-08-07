@@ -30,6 +30,7 @@ def get_long_description():
     """
     Return the README.
     """
+
     return open("README.md", "r", encoding="utf8").read()
 
 
@@ -82,7 +83,7 @@ setup(
     author=f"{full_name}",
     author_email=f"{email}",
     packages=find_packages(__name__),
-    #get_packages(f'{package_slug_name}'),
+
     include_package_data=True,
     python_requires=">=3.8",
     install_requires=get_requirements(),
