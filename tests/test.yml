@@ -1,0 +1,56 @@
+scraper_configs:
+  level:
+    container_el: div
+    container_attr: class
+    container_val: postings-wrapper
+    list_item_el: a
+    list_item_attr: "class"
+    list_item_val:
+      - posting-title
+    href: True
+    extract_items:
+      - name: title
+        tag: h5
+        attr: data-qa
+        val: posting-name
+      - name: link
+        tag: a
+        attr: href
+        val:
+      - name: location
+        tag: span
+        attr: class
+        val: sort-by-location
+      - name: team
+        tag: span
+        attr: class
+        val: sort-by-team
+
+scraper_urls:
+  - url: https://jobs.lever.co/imperfectfoods
+    pagination: False
+    config: level
+
+  - url: https://jobs.lever.co/cfsenergy
+    pagination: False
+    config: level
+
+  - url: https://jobs.lever.co/zeotap
+    pagination: False
+    config: level
+
+  - url: https://jobs.lever.co/syntronic
+    pagination: False
+    config: level
+
+  - url: https://jobs.lever.co/CoinFlip
+    pagination: False
+    config: level
+
+  - url: https://jobs.lever.co/spotify/
+    pagination: False
+    config: level
+
+  - url: https://jobs.lever.co/foxtrotco
+    pagination: False
+    config: level

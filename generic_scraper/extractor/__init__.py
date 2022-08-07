@@ -1,0 +1,1 @@
+from generic_scraper.extractor.extractor import Extractor
